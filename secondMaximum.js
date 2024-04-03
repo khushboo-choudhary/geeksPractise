@@ -24,9 +24,10 @@ function secondMaximum(N, arr) {
   return secondMax;
 }
 
-console.log(secondMaximum(N, arr));
 let N = 6;
 let arr = [12, 35, 1, 10, 34, 1];
+
+console.log(secondMaximum(N, arr));
 
 // Expected Time Complexity: O(N)
 // Expected Auxiliary Space: O(1)
