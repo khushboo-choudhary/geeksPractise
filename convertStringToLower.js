@@ -19,3 +19,14 @@
 
 // Expected Time Complexity:O(n)
 // Expected Auxiliary Space: O(1)
+
+function toLower(s) {
+  var newStr = "";
+  for (var i = 0; i < s.length; i++) {
+    newStr += s[i].toLowerCase();
+  }
+  return newStr;
+}
+
+const s = "ABCddE";
+console.log(toLower(s));
