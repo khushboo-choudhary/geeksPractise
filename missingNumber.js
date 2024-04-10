@@ -19,16 +19,25 @@
 // Expected Time Complexity: O(N)
 // Expected Auxiliary Space: O(1)
 
-function MissingNumber(array, n) {
-  //code here
-  let formula = (n * (n + 1)) / 2;
-  let missing = 0;
-  for (let i = 0; i < array.length; i++) {
-    missing += array[i];
-  }
-  return formula - missing;
+function missingNumber(A, n) {
+  let sum = (n * (n + 1)) / 2;
+  for (let i of A) sum -= i; //it will give arr[i] value in i for of loop having this rule
+  // like i = 1,i = 2, i = 4,i = 5
+  return sum;
 }
 
-let n = 5;
-let array = [1, 2, 3, 5];
+console.log(missingNumber([1, 2, 4, 5], 5));
+
+// function MissingNumber(array, n) {
+//   //code here
+//   let formula = (n * (n + 1)) / 2;
+//   let missing = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     missing += array[i];
+//   }
+//   return formula - missing;
+// }
+
+// let n = 5;
+// let array = [1, 2, 3, 5];
 console.log(MissingNumber(array, n));
